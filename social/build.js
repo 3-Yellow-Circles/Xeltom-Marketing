@@ -12,6 +12,7 @@ const fs = require("fs");
 const os = require("os");
 const path = require("path");
 const { execFileSync } = require("child_process");
+const { PLATFORMS, pad, loadMonth } = require("./calendar");
 
 const month = process.argv[2];
 if (!/^\d{4}-\d{2}$/.test(month || "")) {
@@ -22,26 +23,13 @@ if (!/^\d{4}-\d{2}$/.test(month || "")) {
 const ROOT = path.join(__dirname, "..");
 const MONTH_DIR = path.join(__dirname, month);
 const OUTPUT_DIR = path.join(MONTH_DIR, "output");
-const calendar = require(path.join(MONTH_DIR, "posts.js"));
-const SITE = "https://register.xeltom.com";
-const IMAGE_BASE = `https://3-yellow-circles.github.io/Xeltom-Marketing/social/${month}`;
+const { calendar, posts } = loadMonth(month);
 const CHROME = "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome";
-const PLATFORMS = ["linkedin", "facebook", "instagram"];
 const BATCH_SIZE = 10;
 const csvOnly = process.argv.includes("--csv-only");
 
 const escapeHtml = (s) => String(s).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
 const highlight = (s) => escapeHtml(s).replace(/\*(.+?)\*/g, '<span class="hl">$1</span>');
-const pad = (n) => String(n).padStart(2, "0");
-
-const registerLink = (platform) =>
-  `${SITE}/?utm_source=${platform}&utm_medium=social&utm_campaign=launch_posts`;
-
-const dateFor = (index) => {
-  const d = new Date(`${calendar.startDate}T00:00:00Z`);
-  d.setUTCDate(d.getUTCDate() + index);
-  return `${d.getUTCFullYear()}-${pad(d.getUTCMonth() + 1)}-${pad(d.getUTCDate())}`;
-};
 
 // ---------- Images ----------
 
@@ -119,12 +107,9 @@ const writeCsvs = () => {
   fs.rmSync(OUTPUT_DIR, { recursive: true, force: true });
   fs.mkdirSync(OUTPUT_DIR, { recursive: true });
   PLATFORMS.forEach((platform) => {
-    const rows = calendar.days.map((day, i) => [
-      `${day[platform].replace(/\{link\}/g, registerLink(platform))}\n\n${calendar.hashtags[platform]}`,
-      `${IMAGE_BASE}/day-${pad(i + 1)}.png`,
-      "",
-      `${dateFor(i)} ${calendar.times[platform]}`
-    ]);
+    const rows = posts
+      .filter((p) => p.platform === platform)
+      .map((p) => [p.text, p.imageUrl, "", `${p.date} ${p.time}`]);
     for (let start = 0; start < rows.length; start += BATCH_SIZE) {
       const batch = [["Text", "Image URL", "Tags", "Posting Time"], ...rows.slice(start, start + BATCH_SIZE)];
       const last = Math.min(start + BATCH_SIZE, rows.length);

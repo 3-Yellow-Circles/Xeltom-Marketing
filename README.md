@@ -14,3 +14,7 @@ To rewrite the CSVs without re-rendering the images, add `--csv-only`.
 ## Writing rules
 
 Australian English, no emojis, no em dashes, plain natural voice, and every claim must match what Xeltom actually does. Instagram allows 5 hashtags at most.
+
+## Scheduling with Claude
+
+Buffer is connected to Claude Code through the Buffer MCP (`claude mcp add --scope user --transport http buffer https://mcp.buffer.com/mcp`). Instead of uploading CSVs, ask Claude to "top up Buffer". It fills each channel back up to 10 scheduled posts from the calendar. `CLAUDE.md` has the details.
