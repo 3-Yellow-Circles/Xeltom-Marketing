@@ -1,9 +1,11 @@
 // Builds one month of social posts from social/<month>/posts.js:
 //   1. a 1080x1080 image per day in social/<month>/ (served by GitHub Pages,
 //      because Buffer fetches images by URL)
-//   2. one Buffer bulk-upload CSV per platform in social/<month>/output/ (not committed)
+//   2. Buffer bulk-upload CSVs in social/<month>/output/ (not committed), split into
+//      batches of 10 posts per platform because Buffer only takes 10 per upload
 //
 // Usage (from the repo root): node social/build.js 2026-10
+// Add --csv-only to rewrite the CSVs without re-rendering the images.
 // Needs Google Chrome installed (used headless to render the images).
 
 const fs = require("fs");
@@ -25,6 +27,8 @@ const SITE = "https://register.xeltom.com";
 const IMAGE_BASE = `https://3-yellow-circles.github.io/Xeltom-Marketing/social/${month}`;
 const CHROME = "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome";
 const PLATFORMS = ["linkedin", "facebook", "instagram"];
+const BATCH_SIZE = 10;
+const csvOnly = process.argv.includes("--csv-only");
 
 const escapeHtml = (s) => String(s).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
 const highlight = (s) => escapeHtml(s).replace(/\*(.+?)\*/g, '<span class="hl">$1</span>');
@@ -112,23 +116,24 @@ const renderImages = () => {
 const csvCell = (value) => `"${String(value).replace(/"/g, '""')}"`;
 
 const writeCsvs = () => {
+  fs.rmSync(OUTPUT_DIR, { recursive: true, force: true });
   fs.mkdirSync(OUTPUT_DIR, { recursive: true });
   PLATFORMS.forEach((platform) => {
-    const rows = [["Text", "Image URL", "Tags", "Posting Time"]];
-    calendar.days.forEach((day, i) => {
-      const text = `${day[platform].replace(/\{link\}/g, registerLink(platform))}\n\n${calendar.hashtags[platform]}`;
-      rows.push([
-        text,
-        `${IMAGE_BASE}/day-${pad(i + 1)}.png`,
-        "",
-        `${dateFor(i)} ${calendar.times[platform]}`
-      ]);
-    });
-    const csv = rows.map((r) => r.map(csvCell).join(",")).join("\n") + "\n";
-    fs.writeFileSync(path.join(OUTPUT_DIR, `buffer-${platform}.csv`), csv);
+    const rows = calendar.days.map((day, i) => [
+      `${day[platform].replace(/\{link\}/g, registerLink(platform))}\n\n${calendar.hashtags[platform]}`,
+      `${IMAGE_BASE}/day-${pad(i + 1)}.png`,
+      "",
+      `${dateFor(i)} ${calendar.times[platform]}`
+    ]);
+    for (let start = 0; start < rows.length; start += BATCH_SIZE) {
+      const batch = [["Text", "Image URL", "Tags", "Posting Time"], ...rows.slice(start, start + BATCH_SIZE)];
+      const last = Math.min(start + BATCH_SIZE, rows.length);
+      const csv = batch.map((r) => r.map(csvCell).join(",")).join("\n") + "\n";
+      fs.writeFileSync(path.join(OUTPUT_DIR, `${platform}-days-${pad(start + 1)}-${pad(last)}.csv`), csv);
+    }
   });
 };
 
-renderImages();
+if (!csvOnly) renderImages();
 writeCsvs();
-console.log(`Built ${calendar.days.length} images and ${PLATFORMS.length} Buffer CSVs in social/${month}/`);
+console.log(`${csvOnly ? "Wrote" : `Built ${calendar.days.length} images and`} Buffer CSVs in batches of ${BATCH_SIZE} in social/${month}/output/`);
