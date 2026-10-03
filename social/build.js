@@ -91,10 +91,16 @@ const renderImages = () => {
     const htmlFile = path.join(tmp, `day-${pad(i + 1)}.html`);
     const pngFile = path.join(MONTH_DIR, `day-${pad(i + 1)}.png`);
     fs.writeFileSync(htmlFile, cardHtml(day.img));
+    // Headless Chrome sometimes paints a white patch in the window's bottom-right corner,
+    // so render into a taller window and crop the 1080x1080 card off the top.
     execFileSync(CHROME, [
       "--headless=new", "--disable-gpu", "--hide-scrollbars", "--allow-file-access-from-files",
-      "--window-size=1080,1080", "--virtual-time-budget=1500", `--screenshot=${pngFile}`, `file://${htmlFile}`
+      "--window-size=1080,1280", "--virtual-time-budget=1500", `--screenshot=${pngFile}`, `file://${htmlFile}`
     ], { stdio: "ignore" });
+    const fullFile = pngFile.replace(/\.png$/, ".full.png");
+    fs.renameSync(pngFile, fullFile);
+    execFileSync("ffmpeg", ["-v", "error", "-y", "-i", fullFile, "-vf", "crop=1080:1080:0:0", pngFile]);
+    fs.rmSync(fullFile);
   });
   fs.rmSync(tmp, { recursive: true, force: true });
 };

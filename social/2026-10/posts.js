@@ -165,12 +165,14 @@ We're interested in the answers, because they help decide what gets built next.`
       instagram: `Trainers: what takes up most of your time outside of teaching? Tell us in the comments.`
     },
     {
-      img: { type: "stat", stat: "9", title: "*releases* since May", sub: "with more on the way" },
-      linkedin: `Some behind-the-scenes progress: Xeltom has had 9 releases since May 2026.
+      img: { type: "question", title: "Could a relief trainer find it in *two minutes?*" },
+      linkedin: `Here's a simple test for your RTO.
 
-Those have added organisations and workspaces, a new dashboard, video support, trash tools, categories, assessor-only access and richer resource details. Most of it came from feedback from the trainers using it every day.`,
-      facebook: `Xeltom has had 9 releases since May 2026, most of them shaped by feedback from trainers using it every day.`,
-      instagram: `9 releases since May, most of them shaped by the trainers who use Xeltom every day.`
+Could a relief trainer, with no warning, find the right lesson plan and assessment guide for today's class in under two minutes?
+
+If the honest answer is "probably not", that's the gap Xeltom was built to close.`,
+      facebook: `Could a relief trainer find today's lesson plan in under two minutes at your RTO?`,
+      instagram: `Could a relief trainer find today's lesson plan in under two minutes at your RTO?`
     },
     {
       img: { type: "statement", title: "Files, *links* and *videos* together" },
@@ -183,18 +185,18 @@ In Xeltom, links and videos sit alongside your files, organised by course and su
       instagram: `Not every good resource is a file. Xeltom keeps your links and videos alongside your files, all organised by course.`
     },
     {
-      img: { type: "testimonial", quote: "This allowed me to login and grab what I needed to and pull together a great lesson plan with ease.", name: "Timothy Daly", role: "Trainer, EQC Institute" },
-      linkedin: `"Teaching a class on my new laptop was hard because all of my resources were saved on my old laptop. This allowed me to login and grab what I needed to and pull together a great lesson plan with ease."
+      img: { type: "testimonial", quote: "I had about 15 minutes before class. I jumped on Xeltom and there was a bunch of links and resources that I could use.", name: "Harry", role: "Trainer, EQC Institute" },
+      linkedin: `"I needed to add more activities to make my class more fun and engaging. I also like to leave things a bit last minute so I had about 15 minutes before class. I jumped on Xeltom and checked the trainer support material and there was a bunch of links and resources that I could use."
 
-Timothy Daly, Trainer at EQC Institute
+Harry, Trainer at EQC Institute
 
-When resources are saved on individual laptops, they leave with the laptop. When they're in one shared library, the whole team can use them.`,
-      facebook: `"This allowed me to login and grab what I needed to and pull together a great lesson plan with ease."
+Fifteen minutes before class is when a good resource library really earns its keep.`,
+      facebook: `"I had about 15 minutes before class. I jumped on Xeltom and checked the trainer support material and there was a bunch of links and resources that I could use."
 
-Timothy Daly, Trainer at EQC Institute`,
-      instagram: `New laptop and none of your resources? Timothy logged in to Xeltom and had what he needed.
+Harry, Trainer at EQC Institute`,
+      instagram: `Fifteen minutes before class and needing more activities? Harry found what he needed in Xeltom.
 
-"This allowed me to login and grab what I needed." Timothy Daly, EQC Institute`
+Harry, Trainer at EQC Institute`
     },
     {
       img: { type: "list", title: "Audit prep: a *resource* check", items: ["Is every resource current?", "Is it clearly labelled?", "Do you know who changed it?", "Can it be found quickly?"] },
@@ -239,14 +241,12 @@ The fewer places they need to look, the sooner they feel confident in front of a
       instagram: `A new trainer's first day goes better with the course overview, current lesson plans, assessment guides and someone to ask, all in one place.`
     },
     {
-      img: { type: "question", title: "Could a relief trainer find it in *two minutes?*" },
-      linkedin: `Here's a simple test for your RTO.
+      img: { type: "stat", stat: "9", title: "*releases* since May", sub: "with more on the way" },
+      linkedin: `Some behind-the-scenes progress: Xeltom has had 9 releases since May 2026.
 
-Could a relief trainer, with no warning, find the right lesson plan and assessment guide for today's class in under two minutes?
-
-If the honest answer is "probably not", that's the gap Xeltom was built to close.`,
-      facebook: `Could a relief trainer find today's lesson plan in under two minutes at your RTO?`,
-      instagram: `Could a relief trainer find today's lesson plan in under two minutes at your RTO?`
+Those have added organisations and workspaces, a new dashboard, video support, trash tools, categories, assessor-only access and richer resource details. Most of it came from feedback from the trainers using it every day.`,
+      facebook: `Xeltom has had 9 releases since May 2026, most of them shaped by feedback from trainers using it every day.`,
+      instagram: `9 releases since May, most of them shaped by the trainers who use Xeltom every day.`
     },
     {
       img: { type: "statement", title: "Your *personalised* dashboard" },
@@ -257,18 +257,18 @@ It shows their saved resources, recently added resources across their courses, a
       instagram: `Saved resources, what's new and your recent activity, all on your own Xeltom dashboard.`
     },
     {
-      img: { type: "testimonial", quote: "I had about 15 minutes before class. I jumped on Xeltom and there was a bunch of links and resources that I could use.", name: "Harry", role: "Trainer, EQC Institute" },
-      linkedin: `"I needed to add more activities to make my class more fun and engaging. I also like to leave things a bit last minute so I had about 15 minutes before class. I jumped on Xeltom and checked the trainer support material and there was a bunch of links and resources that I could use."
+      img: { type: "testimonial", quote: "This allowed me to login and grab what I needed to and pull together a great lesson plan with ease.", name: "Timothy Daly", role: "Trainer, EQC Institute" },
+      linkedin: `"Teaching a class on my new laptop was hard because all of my resources were saved on my old laptop. This allowed me to login and grab what I needed to and pull together a great lesson plan with ease."
 
-Harry, Trainer at EQC Institute
+Timothy Daly, Trainer at EQC Institute
 
-Fifteen minutes before class is when a good resource library really earns its keep.`,
-      facebook: `"I had about 15 minutes before class. I jumped on Xeltom and checked the trainer support material and there was a bunch of links and resources that I could use."
+When resources are saved on individual laptops, they leave with the laptop. When they're in one shared library, the whole team can use them.`,
+      facebook: `"This allowed me to login and grab what I needed to and pull together a great lesson plan with ease."
 
-Harry, Trainer at EQC Institute`,
-      instagram: `Fifteen minutes before class and needing more activities? Harry found what he needed in Xeltom.
+Timothy Daly, Trainer at EQC Institute`,
+      instagram: `New laptop and none of your resources? Timothy logged in to Xeltom and had what he needed.
 
-Harry, Trainer at EQC Institute`
+"This allowed me to login and grab what I needed." Timothy Daly, EQC Institute`
     },
     {
       img: { type: "statement", title: "The right access for *every role*" },
