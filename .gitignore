@@ -1,3 +1,11 @@
 node_modules/
 .DS_Store
 social/*/output/
+.env
+.env
+*.mp4
+*.wav
+*.mp3
+social/**/renders/
+social/**/snapshots/
+social/**/voice-samples/
