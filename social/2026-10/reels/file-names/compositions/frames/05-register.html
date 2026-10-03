@@ -1,0 +1,83 @@
+<template>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+  <style>
+    @font-face { font-family: "Space Grotesk"; font-weight: 600; src: url("assets/fonts/space-grotesk-600.woff2") format("woff2"); }
+    @font-face { font-family: "Space Grotesk"; font-weight: 700; src: url("assets/fonts/space-grotesk-700.woff2") format("woff2"); }
+    #root {
+      position: absolute;
+      inset: 0;
+      width: 1080px;
+      height: 1920px;
+      overflow: hidden;
+    }
+    .f05-ground {
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(circle at 50% 36%, rgba(25, 181, 155, 0.22) 0%, transparent 42%),
+        linear-gradient(180deg, #142038 0%, #0d1628 100%);
+    }
+    .f05-logo {
+      position: absolute;
+      left: 232px;
+      top: 520px;
+      width: 616px;
+      height: 192px;
+    }
+    .f05-pill {
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 830px;
+      margin: 0 auto;
+      width: 760px;
+      height: 104px;
+      border-radius: 100px;
+      background: #19b59b;
+      color: #142038;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: "Space Grotesk", sans-serif;
+      font-weight: 700;
+      font-size: 46px;
+      letter-spacing: -0.01em;
+    }
+    .f05-url {
+      position: absolute;
+      left: 0;
+      width: 1080px;
+      top: 990px;
+      text-align: center;
+      font-family: "Space Grotesk", sans-serif;
+      font-weight: 600;
+      font-size: 56px;
+      color: #ffffff;
+    }
+  </style>
+
+  <div data-hf-id="hf-kzvq" id="root" data-composition-id="05-register" data-width="1080" data-height="1920">
+    <div data-hf-id="hf-l222" id="f05-ground" class="f05-ground clip" data-start="0" data-duration="3.997" data-track-index="0"></div>
+    <img data-hf-id="hf-zor9" class="f05-logo clip" id="f05-logo" src="assets/xeltom-logo-lockup-white.svg" alt="Xeltom" width="616" height="192" data-start="0" data-duration="3.997" data-track-index="1">
+    <div data-hf-id="hf-15ey" class="f05-pill clip" id="f05-pill" data-start="0" data-duration="3.997" data-track-index="2">3 months free for early RTOs</div>
+    <div data-hf-id="hf-sxv6" class="f05-url clip" id="f05-url" data-start="0" data-duration="3.997" data-track-index="3">register.xeltom.com</div>
+  </div>
+
+  <script>
+    (function () {
+      const tl = gsap.timeline({ paused: true });
+
+      // Scene 1: the logo springs into existence on "Xeltom" (0.26s).
+      tl.fromTo("#f05-logo", { opacity: 0, scale: 0.6 }, { opacity: 1, scale: 1, duration: 0.8, ease: "back.out(1.5)" }, 0.2);
+
+      // Scene 2: the offer pill pops in on "Register" (1.36s).
+      tl.fromTo("#f05-pill", { opacity: 0, scale: 0.8, y: 20 }, { opacity: 1, scale: 1, y: 0, duration: 0.6, ease: "back.out(1.4)" }, 1.3);
+
+      // Scene 3: the address fades up (2.5s) and everything holds to the end.
+      tl.fromTo("#f05-url", { opacity: 0, y: 24 }, { opacity: 1, y: 0, duration: 0.6, ease: "power3.out" }, 2.45);
+
+      tl.to({}, { duration: 3.997 }, 0);
+      window.__timelines["05-register"] = tl;
+    })();
+  </script>
+</template>

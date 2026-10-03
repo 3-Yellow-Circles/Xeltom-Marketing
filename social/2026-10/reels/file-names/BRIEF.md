@@ -1,0 +1,44 @@
+---
+workflow: product-launch-video
+flow: automation
+storyboard: no
+message: "Stop guessing which file is current: Xeltom keeps one current version of every resource"
+destination: instagram-reels
+aspect: 1080x1920
+language: en-AU
+audience: "Australian RTO trainers, trainer managers, compliance staff and directors"
+length: 25s
+angle: "The file name confession"
+voice: bb9907f77f44479996299a56bb04ac49
+---
+
+## Intent
+
+Concept #4, "The file name confession". Messy file names type themselves out one after another
+(Assessment_FINAL_v2.docx, Assessment_FINAL_v2_USE THIS ONE.docx, Copy of Assessment (3).docx).
+A deadpan voiceover reads them out. Hook: "Which one's the real assessment?" Then cut to the tidy
+Xeltom library with one current version. Funny without being try-hard; the least ad-like option.
+Sample reel to set the style for a recurring 3-reels-a-week schedule (reels replace image posts).
+
+## Assets
+
+- /Users/regulus2/Documents/projects/xeltom-lead-collection/public/assets/screenshots/demo.mp4 — real screen recording: searching and filtering resources by course (2560 wide; demo-mobile.mp4 exists too)
+- /Users/regulus2/Documents/projects/xeltom-lead-collection/public/assets/screenshots/course-tour.mp4 — real recording: finding a course, browsing subjects and resources by type
+- /Users/regulus2/Documents/projects/xeltom-lead-collection/public/assets/screenshots/resource-preview.mp4 — real recording: a resource page with overview, recommended usage, download
+- /Users/regulus2/Documents/projects/xeltom-lead-collection/public/assets/screenshots/resource-page.webp — clean still of a resource page showing uploaded by / last updated
+- /Users/regulus2/Documents/projects/xeltom-lead-collection/public/assets/screenshots/dashboard.webp — clean still of the dashboard
+- /Users/regulus2/Documents/projects/xeltom-lead-collection/public/assets/xeltom-logo-lockup-white.svg — logo for the end card (on navy)
+- /Users/regulus2/Documents/projects/xeltom-lead-collection/public/assets/xeltom-icon.png — app icon
+
+## Customizations
+
+- Music bed (royalty-free, dry minimal plucks + soft beat, sits under the voice) + AI voiceover (HeyGen voice bb9907f77f44479996299a56bb04ac49, chosen by the user) + burned-in captions.
+- Brand colours: teal #19b59b (primary), navy #1b2b4b, deep navy #142038.
+
+## Notes
+
+- Australian English, no em dashes, no emojis, no hype words, no AI tells.
+- Claims must match the real app: one resource can be attached to several subjects so there is one copy; each resource shows who uploaded it, who last updated it and when; search by keyword, filter by course, subject or category.
+- CTA: register at register.xeltom.com; RTOs that register before launch get 3 months free.
+- No URL capture: no-capture path with the supplied recordings.
+- Destinations: Instagram Reels, Facebook Reels, LinkedIn video (all 9:16).

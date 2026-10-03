@@ -1,0 +1,31 @@
+{
+  "lines": [
+    {
+      "id": "01",
+      "sfx": [
+        "keyboard-typing-soft"
+      ]
+    },
+    {
+      "id": "02",
+      "sfx": [
+        "impact-soft"
+      ]
+    },
+    {
+      "id": "03",
+      "sfx": [
+        "whoosh-soft"
+      ]
+    },
+    {
+      "id": "05",
+      "sfx": [
+        "chime-soft"
+      ]
+    }
+  ],
+  "bgm": {
+    "mode": "none"
+  }
+}

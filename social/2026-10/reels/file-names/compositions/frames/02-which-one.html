@@ -1,0 +1,94 @@
+<template>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+  <style>
+    @font-face { font-family: "Space Grotesk"; font-weight: 500; src: url("assets/fonts/space-grotesk-500.woff2") format("woff2"); }
+    @font-face { font-family: "Space Grotesk"; font-weight: 700; src: url("assets/fonts/space-grotesk-700.woff2") format("woff2"); }
+    #root {
+      position: absolute;
+      inset: 0;
+      width: 1080px;
+      height: 1920px;
+      overflow: hidden;
+    }
+    .f02-ground {
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(circle at 50% 30%, rgba(25, 181, 155, 0.18) 0%, transparent 50%),
+        linear-gradient(180deg, #142038 0%, #0d1628 100%);
+    }
+    .f02-row {
+      position: absolute;
+      left: 48px;
+      width: 984px;
+      height: 150px;
+      display: flex;
+      align-items: center;
+      gap: 28px;
+      padding: 0 32px;
+      border-radius: 14px;
+      background: #1e2c48;
+      border: 1.5px solid rgba(255, 255, 255, 0.14);
+    }
+    .f02-icon { flex: 0 0 auto; width: 64px; height: 80px; }
+    .f02-name {
+      font-family: "Space Grotesk", sans-serif;
+      font-weight: 500;
+      font-size: 39px;
+      color: #ffffff;
+      white-space: nowrap;
+    }
+    .f02-q {
+      position: absolute;
+      left: 0;
+      width: 1080px;
+      top: 180px;
+      text-align: center;
+      font-family: "Space Grotesk", sans-serif;
+      font-weight: 700;
+      font-size: 620px;
+      line-height: 1;
+      color: #19b59b;
+    }
+  </style>
+
+  <div data-hf-id="hf-88fj" id="root" data-composition-id="02-which-one" data-width="1080" data-height="1920" data-duration="3.613">
+    <div data-hf-id="hf-f17r" id="f02-ground" class="f02-ground clip" data-start="0" data-duration="3.613" data-track-index="0"></div>
+
+    <div data-hf-id="hf-jsx4" class="f02-row clip" id="f02-row1" style="top: 720px;" data-start="0" data-duration="3.613" data-track-index="1">
+      <svg data-hf-id="hf-8gs7" class="f02-icon" viewBox="0 0 64 80" aria-hidden="true"><path data-hf-id="hf-z2q1" d="M6 0h36l22 22v52a6 6 0 0 1-6 6H6a6 6 0 0 1-6-6V6a6 6 0 0 1 6-6z" fill="#ffffff" opacity="0.92" /><path data-hf-id="hf-skxi" d="M42 0l22 22H48a6 6 0 0 1-6-6z" fill="#19b59b" /></svg>
+      <div data-hf-id="hf-c0iy" class="f02-name">Assessment_FINAL_v2.docx</div>
+    </div>
+    <div data-hf-id="hf-pagy" class="f02-row clip" id="f02-row2" style="top: 894px;" data-start="0" data-duration="3.613" data-track-index="2">
+      <svg data-hf-id="hf-qrcn" class="f02-icon" viewBox="0 0 64 80" aria-hidden="true"><path data-hf-id="hf-p4sd" d="M6 0h36l22 22v52a6 6 0 0 1-6 6H6a6 6 0 0 1-6-6V6a6 6 0 0 1 6-6z" fill="#ffffff" opacity="0.92" /><path data-hf-id="hf-3zoa" d="M42 0l22 22H48a6 6 0 0 1-6-6z" fill="#19b59b" /></svg>
+      <div data-hf-id="hf-l6ni" class="f02-name">Assessment_FINAL_v2_USE THIS ONE.docx</div>
+    </div>
+    <div data-hf-id="hf-ydog" class="f02-row clip" id="f02-row3" style="top: 1068px;" data-start="0" data-duration="3.613" data-track-index="3">
+      <svg data-hf-id="hf-qd1m" class="f02-icon" viewBox="0 0 64 80" aria-hidden="true"><path data-hf-id="hf-qbpg" d="M6 0h36l22 22v52a6 6 0 0 1-6 6H6a6 6 0 0 1-6-6V6a6 6 0 0 1 6-6z" fill="#ffffff" opacity="0.92" /><path data-hf-id="hf-4dzb" d="M42 0l22 22H48a6 6 0 0 1-6-6z" fill="#19b59b" /></svg>
+      <div data-hf-id="hf-1fko" class="f02-name">Copy of Assessment (3).docx</div>
+    </div>
+
+    <div data-hf-id="hf-wirq" class="f02-q clip" id="f02-q" data-start="0" data-duration="3.613" data-track-index="4">?</div>
+  </div>
+
+  <script>
+    (function () {
+      const tl = gsap.timeline({ paused: true });
+
+      // Scene 1 (0 to 1.5s): the three rows shuffle out of line and overlap, nervous and compressed.
+      tl.fromTo("#f02-row1", { x: 0, y: 0, rotation: 0 }, { x: -26, y: 70, rotation: -3, duration: 0.5, ease: "power3.inOut" }, 0.15);
+      tl.fromTo("#f02-row2", { x: 0, y: 0, rotation: 0 }, { x: 30, y: -40, rotation: 2.5, duration: 0.5, ease: "power3.inOut" }, 0.3);
+      tl.fromTo("#f02-row3", { x: 0, y: 0, rotation: 0 }, { x: -12, y: -150, rotation: -1.5, duration: 0.5, ease: "power3.inOut" }, 0.45);
+      tl.to("#f02-row1", { x: 18, rotation: 2, duration: 0.4, ease: "power3.inOut" }, 0.75);
+      tl.to("#f02-row2", { x: -20, rotation: -2, duration: 0.4, ease: "power3.inOut" }, 0.85);
+      tl.to("#f02-row3", { x: 24, rotation: 1.5, duration: 0.4, ease: "power3.inOut" }, 0.95);
+
+      // Scene 2 (on "the real", 1.54s): rows sink, dim and blur into the background; a huge "?" springs in.
+      tl.to(["#f02-row1", "#f02-row2", "#f02-row3"], { y: "+=360", opacity: 0.35, filter: "blur(6px)", scale: 0.94, duration: 0.6, ease: "power3.out" }, 1.45);
+      tl.fromTo("#f02-q", { opacity: 0, scale: 0.4, rotation: -12 }, { opacity: 1, scale: 1, rotation: 0, duration: 0.7, ease: "back.out(1.6)" }, 1.54);
+
+      tl.to({}, { duration: 3.213 }, 0);
+      window.__timelines["02-which-one"] = tl;
+    })();
+  </script>
+</template>

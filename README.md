@@ -11,6 +11,18 @@ Social post images and the scripts that build them. GitHub Pages serves this rep
 
 To rewrite the CSVs without re-rendering the images, add `--csv-only`.
 
+## Reels
+
+At least 3 days a week (Monday, Wednesday and Friday) are reels instead of images. Each month's `reels.js` lists the reel days with their captions, and each reel is a HyperFrames project in `social/<yyyy-mm>/reels/<slug>/` with a music bed, AI voiceover and captions.
+
+Rendered videos are not committed. They are uploaded to the Cloudflare R2 bucket and served from `https://media.xeltom.com/`:
+
+```
+node --env-file=.env social/upload-video.js social/<yyyy-mm>/reels/<slug>/renders/video.mp4 social/<yyyy-mm>/<slug>.mp4
+```
+
+`.env` (not committed) holds `R2_ACCESS_KEY_ID`, `R2_SECRET_ACCESS_KEY`, `R2_ENDPOINT`, `R2_BUCKET` and `R2_PUBLIC_URL`. Reels need the Buffer MCP to post as Reels; the CSVs only carry the video link.
+
 ## Writing rules
 
 Australian English, no emojis, no em dashes, plain natural voice, and every claim must match what Xeltom actually does. Instagram allows 5 hashtags at most.

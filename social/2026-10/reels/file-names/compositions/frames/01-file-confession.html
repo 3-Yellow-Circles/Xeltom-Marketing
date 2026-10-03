@@ -1,0 +1,135 @@
+<template>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+  <style>
+    @font-face { font-family: "Space Grotesk"; font-weight: 500; src: url("assets/fonts/space-grotesk-500.woff2") format("woff2"); }
+    @font-face { font-family: "Space Grotesk"; font-weight: 700; src: url("assets/fonts/space-grotesk-700.woff2") format("woff2"); }
+    @font-face { font-family: "Inter"; font-weight: 500; src: url("assets/fonts/inter-500.woff2") format("woff2"); }
+    #root {
+      position: absolute;
+      inset: 0;
+      width: 1080px;
+      height: 1920px;
+      overflow: hidden;
+      font-family: "Inter", sans-serif;
+    }
+    .f01-ground {
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(circle at 80% 18%, rgba(25, 181, 155, 0.16) 0%, transparent 45%),
+        linear-gradient(180deg, #142038 0%, #0d1628 100%);
+    }
+    .f01-path {
+      position: absolute;
+      left: 72px;
+      top: 650px;
+      font-family: "Inter", sans-serif;
+      font-weight: 500;
+      font-size: 30px;
+      letter-spacing: 0.01em;
+      color: rgba(255, 255, 255, 0.5);
+    }
+    .f01-row {
+      position: absolute;
+      left: 48px;
+      width: 984px;
+      height: 150px;
+      display: flex;
+      align-items: center;
+      gap: 28px;
+      padding: 0 32px;
+      border-radius: 14px;
+      background: rgba(255, 255, 255, 0.06);
+      border: 1.5px solid rgba(255, 255, 255, 0.12);
+    }
+    .f01-icon {
+      flex: 0 0 auto;
+      width: 64px;
+      height: 80px;
+    }
+    .f01-name {
+      font-family: "Space Grotesk", sans-serif;
+      font-weight: 500;
+      font-size: 39px;
+      line-height: 1.2;
+      color: #ffffff;
+      white-space: nowrap;
+    }
+    .f01-name .ch { display: none; }
+    .f01-caret {
+      display: inline-block;
+      width: 4px;
+      height: 44px;
+      margin-left: 4px;
+      vertical-align: -6px;
+      background: #19b59b;
+      opacity: 0;
+    }
+  </style>
+
+  <div data-hf-id="hf-dbuv" id="root" data-composition-id="01-file-confession" data-width="1080" data-height="1920">
+    <div data-hf-id="hf-3jz7" id="f01-ground" class="f01-ground clip" data-start="0" data-duration="6.661" data-track-index="0"></div>
+
+    <div data-hf-id="hf-r2i1" class="f01-path clip" id="f01-path" data-start="0" data-duration="6.661" data-track-index="1">Shared Drive › Cert IV › Assessments</div>
+
+    <div data-hf-id="hf-rlgx" class="f01-row clip" id="f01-row1" style="top: 720px;" data-start="0" data-duration="6.661" data-track-index="2">
+      <svg data-hf-id="hf-n77a" class="f01-icon" viewBox="0 0 64 80" aria-hidden="true"><path data-hf-id="hf-z2q1" d="M6 0h36l22 22v52a6 6 0 0 1-6 6H6a6 6 0 0 1-6-6V6a6 6 0 0 1 6-6z" fill="#ffffff" opacity="0.92" /><path data-hf-id="hf-skxi" d="M42 0l22 22H48a6 6 0 0 1-6-6z" fill="#19b59b" /><rect data-hf-id="hf-cohg" x="12" y="40" width="36" height="5" rx="2.5" fill="#142038" opacity="0.35" /><rect data-hf-id="hf-kx7m" x="12" y="52" width="40" height="5" rx="2.5" fill="#142038" opacity="0.35" /><rect data-hf-id="hf-1mct" x="12" y="64" width="26" height="5" rx="2.5" fill="#142038" opacity="0.35" /></svg>
+      <div data-hf-id="hf-ttd0" class="f01-name" id="f01-name1" data-text="Assessment_FINAL_v2.docx"></div>
+    </div>
+
+    <div data-hf-id="hf-f8sp" class="f01-row clip" id="f01-row2" style="top: 894px;" data-start="0" data-duration="6.661" data-track-index="3">
+      <svg data-hf-id="hf-d5lm" class="f01-icon" viewBox="0 0 64 80" aria-hidden="true"><path data-hf-id="hf-p4sd" d="M6 0h36l22 22v52a6 6 0 0 1-6 6H6a6 6 0 0 1-6-6V6a6 6 0 0 1 6-6z" fill="#ffffff" opacity="0.92" /><path data-hf-id="hf-3zoa" d="M42 0l22 22H48a6 6 0 0 1-6-6z" fill="#19b59b" /><rect data-hf-id="hf-191o" x="12" y="40" width="36" height="5" rx="2.5" fill="#142038" opacity="0.35" /><rect data-hf-id="hf-7gg6" x="12" y="52" width="40" height="5" rx="2.5" fill="#142038" opacity="0.35" /><rect data-hf-id="hf-mjvl" x="12" y="64" width="26" height="5" rx="2.5" fill="#142038" opacity="0.35" /></svg>
+      <div data-hf-id="hf-yt57" class="f01-name" id="f01-name2" data-text="Assessment_FINAL_v2_USE THIS ONE.docx"></div>
+    </div>
+
+    <div data-hf-id="hf-yf83" class="f01-row clip" id="f01-row3" style="top: 1068px;" data-start="0" data-duration="6.661" data-track-index="4">
+      <svg data-hf-id="hf-djwn" class="f01-icon" viewBox="0 0 64 80" aria-hidden="true"><path data-hf-id="hf-qbpg" d="M6 0h36l22 22v52a6 6 0 0 1-6 6H6a6 6 0 0 1-6-6V6a6 6 0 0 1 6-6z" fill="#ffffff" opacity="0.92" /><path data-hf-id="hf-4dzb" d="M42 0l22 22H48a6 6 0 0 1-6-6z" fill="#19b59b" /><rect data-hf-id="hf-024l" x="12" y="40" width="36" height="5" rx="2.5" fill="#142038" opacity="0.35" /><rect data-hf-id="hf-7ur7" x="12" y="52" width="40" height="5" rx="2.5" fill="#142038" opacity="0.35" /><rect data-hf-id="hf-nqso" x="12" y="64" width="26" height="5" rx="2.5" fill="#142038" opacity="0.35" /></svg>
+      <div data-hf-id="hf-i5hs" class="f01-name" id="f01-name3" data-text="Copy of Assessment (3).docx"></div>
+    </div>
+  </div>
+
+  <script>
+    (function () {
+      const tl = gsap.timeline({ paused: true });
+      const root = document.querySelector('[data-composition-id="01-file-confession"]');
+
+      // Split each file name into hidden characters plus a trailing caret.
+      const names = [1, 2, 3].map((n) => {
+        const el = root.querySelector("#f01-name" + n);
+        const text = el.getAttribute("data-text");
+        el.innerHTML = text.split("").map((c) => '<span class="ch">' + (c === " " ? "&nbsp;" : c) + "</span>").join("") + '<span class="f01-caret"></span>';
+        return { el, chars: el.querySelectorAll(".ch"), caret: el.querySelector(".f01-caret") };
+      });
+
+      // Types a name between two voice cues; the caret shows while typing.
+      const type = (i, start, end) => {
+        const { chars, caret } = names[i];
+        const step = (end - start) / chars.length;
+        tl.set(caret, { opacity: 1 }, start);
+        chars.forEach((c, k) => tl.set(c, { display: "inline" }, start + k * step));
+        return end;
+      };
+
+      // Scene 1: path label and first row arrive; name types as the VO reads it (0.30 to 1.80s).
+      tl.fromTo("#f01-path", { opacity: 0, y: 16 }, { opacity: 1, y: 0, duration: 0.6, ease: "power3.out" }, 0.05);
+      tl.fromTo("#f01-row1", { opacity: 0, y: 40 }, { opacity: 1, y: 0, duration: 0.6, ease: "power3.out" }, 0.1);
+      type(0, 0.3, 1.8);
+
+      // Scene 2: second row slides in and types on its cue (2.09 to 4.55s); row 1 dims.
+      tl.fromTo("#f01-row2", { opacity: 0, y: 40 }, { opacity: 1, y: 0, duration: 0.55, ease: "power3.out" }, 1.85);
+      tl.set(names[0].caret, { opacity: 0 }, 2.05);
+      type(1, 2.09, 4.55);
+      tl.to("#f01-row1", { opacity: 0.55, duration: 0.5, ease: "power3.out" }, 2.1);
+
+      // Scene 3: third row types (4.82 to 6.10s); all rows hold, caret blinks on the last.
+      tl.fromTo("#f01-row3", { opacity: 0, y: 40 }, { opacity: 1, y: 0, duration: 0.55, ease: "power3.out" }, 4.55);
+      tl.set(names[1].caret, { opacity: 0 }, 4.78);
+      tl.to("#f01-row2", { opacity: 0.55, duration: 0.5, ease: "power3.out" }, 4.8);
+      type(2, 4.82, 6.1);
+      [6.25, 6.5].forEach((t, k) => tl.set(names[2].caret, { opacity: k % 2 === 0 ? 0 : 1 }, t));
+
+      tl.to({}, { duration: 6.661 }, 0);
+      window.__timelines["01-file-confession"] = tl;
+    })();
+  </script>
+</template>

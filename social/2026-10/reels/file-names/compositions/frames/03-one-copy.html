@@ -1,0 +1,113 @@
+<template>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+  <style>
+    @font-face { font-family: "Space Grotesk"; font-weight: 700; src: url("assets/fonts/space-grotesk-700.woff2") format("woff2"); }
+    #root {
+      position: absolute;
+      inset: 0;
+      width: 1080px;
+      height: 1920px;
+      overflow: hidden;
+    }
+    .f03-ground {
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(circle at 85% 12%, rgba(25, 181, 155, 0.14) 0%, transparent 40%),
+        radial-gradient(circle at 10% 90%, rgba(25, 181, 155, 0.08) 0%, transparent 45%),
+        #ffffff;
+    }
+    #root .cap-fade {
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 1600px;
+      height: 320px;
+      background: linear-gradient(180deg, rgba(20, 32, 56, 0) 0%, rgba(20, 32, 56, 0.9) 38%, #142038 100%);
+    }
+    .f03-line {
+      position: absolute;
+      left: 72px;
+      font-family: "Space Grotesk", sans-serif;
+      font-weight: 700;
+      font-size: 96px;
+      line-height: 1.08;
+      letter-spacing: -0.02em;
+      color: #142038;
+      white-space: nowrap;
+    }
+    .f03-line.accent { color: #19b59b; }
+    .f03-card {
+      position: absolute;
+      left: 48px;
+      top: 720px;
+      width: 984px;
+      height: 509px;
+      border-radius: 18px;
+      overflow: hidden;
+      background: #ffffff;
+      border: 1.5px solid rgba(25, 181, 155, 0.2);
+      box-shadow: 0 40px 80px rgba(20, 32, 56, 0.18), 0 8px 20px rgba(20, 32, 56, 0.08);
+    }
+    .f03-zoom {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 984px;
+      height: 509px;
+      transform-origin: 0 0;
+    }
+    .f03-zoom img {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 984px;
+      height: 509px;
+    }
+    .f03-ring {
+      position: absolute;
+      left: 744px;
+      top: 348px;
+      width: 184px;
+      height: 58px;
+      border-radius: 10px;
+      border: 3px solid #19b59b;
+      box-shadow: 0 0 0 6px rgba(25, 181, 155, 0.18);
+    }
+  </style>
+
+  <div data-hf-id="hf-sfds" id="root" data-composition-id="03-one-copy" data-width="1080" data-height="1920" data-duration="8.049">
+    <div data-hf-id="hf-xf69" id="f03-ground" class="f03-ground clip" data-start="0" data-duration="8.049" data-track-index="0"></div>
+    <div id="f03-cap-fade" class="cap-fade clip" data-start="0" data-duration="8.049" data-track-index="7"></div>
+
+    <div data-hf-id="hf-eadd" class="f03-line clip" id="f03-line1" style="top: 380px;" data-start="0" data-duration="8.049" data-track-index="1">One place.</div>
+    <div data-hf-id="hf-osg3" class="f03-line accent clip" id="f03-line2" style="top: 486px;" data-start="0" data-duration="8.049" data-track-index="2">One current copy.</div>
+
+    <div data-hf-id="hf-5no4" class="f03-card clip" id="f03-card" data-start="0" data-duration="8.049" data-track-index="3">
+      <div data-hf-id="hf-uujy" class="f03-zoom" id="f03-zoom">
+        <img data-hf-id="hf-a1r8" src="assets/resource-page.webp" alt="" width="1600" height="828">
+        <div data-hf-id="hf-hioa" class="f03-ring" id="f03-ring"></div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    (function () {
+      const tl = gsap.timeline({ paused: true });
+
+      // Scene 1: the real resource page rises in on "In Xeltom"; "One place." lands on "one place" (2.35s).
+      tl.fromTo("#f03-card", { opacity: 0, y: 120, scale: 0.94 }, { opacity: 1, y: 0, scale: 1, duration: 0.9, ease: "power3.out" }, 0.2);
+      tl.fromTo("#f03-line1", { opacity: 0, y: 30 }, { opacity: 1, y: 0, duration: 0.6, ease: "power3.out" }, 2.3);
+
+      // Scene 2: "One current copy." on its cue (3.46s), then a slow push toward the details.
+      tl.fromTo("#f03-line2", { opacity: 0, y: 30 }, { opacity: 1, y: 0, duration: 0.6, ease: "power3.out" }, 3.4);
+      tl.fromTo("#f03-zoom", { scale: 1, x: 0, y: 0 }, { scale: 1.45, x: -443, y: -229, duration: 2.0, ease: "power3.inOut" }, 3.8);
+
+      // Scene 3: on "who last updated it" the teal ring blooms around the Last updated tile, then holds.
+      tl.fromTo("#f03-ring", { opacity: 0, scale: 1.25 }, { opacity: 1, scale: 1, duration: 0.6, ease: "power3.out" }, 5.6);
+
+      tl.to({}, { duration: 7.549 }, 0);
+      window.__timelines["03-one-copy"] = tl;
+    })();
+  </script>
+</template>

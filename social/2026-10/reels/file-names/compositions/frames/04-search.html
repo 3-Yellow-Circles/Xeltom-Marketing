@@ -1,0 +1,92 @@
+<template>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+  <style>
+    @font-face { font-family: "Space Grotesk"; font-weight: 700; src: url("assets/fonts/space-grotesk-700.woff2") format("woff2"); }
+    #root {
+      position: absolute;
+      inset: 0;
+      width: 1080px;
+      height: 1920px;
+      overflow: hidden;
+    }
+    .f04-ground {
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(circle at 15% 10%, rgba(25, 181, 155, 0.14) 0%, transparent 40%),
+        #ffffff;
+    }
+    #root .cap-fade {
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 1600px;
+      height: 320px;
+      background: linear-gradient(180deg, rgba(20, 32, 56, 0) 0%, rgba(20, 32, 56, 0.9) 38%, #142038 100%);
+    }
+    .f04-word {
+      position: absolute;
+      left: 72px;
+      font-family: "Space Grotesk", sans-serif;
+      font-weight: 700;
+      font-size: 120px;
+      line-height: 1;
+      letter-spacing: -0.02em;
+      color: #142038;
+    }
+    .f04-word.accent { color: #19b59b; }
+    .f04-underline {
+      position: absolute;
+      left: 76px;
+      top: 676px;
+      width: 330px;
+      height: 10px;
+      border-radius: 6px;
+      background: #19b59b;
+      transform-origin: 0 50%;
+    }
+    .f04-card {
+      position: absolute;
+      left: 48px;
+      top: 760px;
+      width: 984px;
+      height: 724px;
+      border-radius: 18px;
+      background: #ffffff;
+      border: 1.5px solid rgba(25, 181, 155, 0.2);
+      box-shadow: 0 40px 80px rgba(20, 32, 56, 0.18), 0 8px 20px rgba(20, 32, 56, 0.08);
+    }
+  </style>
+
+  <div data-hf-id="hf-bna0" id="root" data-composition-id="04-search" data-width="1080" data-height="1920" data-duration="4.701">
+    <div data-hf-id="hf-24os" id="f04-ground" class="f04-ground clip" data-start="0" data-duration="4.701" data-track-index="0"></div>
+    <div id="f04-cap-fade" class="cap-fade clip" data-start="0" data-duration="4.701" data-track-index="7"></div>
+
+    <div data-hf-id="hf-0xvg" class="f04-word clip" id="f04-w1" style="top: 300px;" data-start="0" data-duration="4.701" data-track-index="1">Search.</div>
+    <div data-hf-id="hf-cvco" class="f04-word clip" id="f04-w2" style="top: 430px;" data-start="0" data-duration="4.701" data-track-index="2">Filter.</div>
+    <div data-hf-id="hf-mck0" class="f04-word accent clip" id="f04-w3" style="top: 560px;" data-start="0" data-duration="4.701" data-track-index="3">Found.</div>
+    <div data-hf-id="hf-n2x8" class="f04-underline clip" id="f04-underline" data-start="0" data-duration="4.701" data-track-index="4"></div>
+
+    <div data-hf-id="hf-nq6f" class="f04-card clip" id="f04-card" data-start="0" data-duration="4.701" data-track-index="5"></div>
+
+    <!-- approved frame video hoisted by assemble-index -->
+  </div>
+
+  <script>
+    (function () {
+      const tl = gsap.timeline({ paused: true });
+
+      // Scene 1: the card is in place with the recording playing; words land on "search" (1.02s) and "filter" (1.92s).
+      tl.fromTo("#f04-card", { opacity: 0, y: 60 }, { opacity: 1, y: 0, duration: 0.5, ease: "power3.out" }, 0);
+      tl.fromTo("#f04-w1", { opacity: 0, y: 30 }, { opacity: 1, y: 0, duration: 0.5, ease: "power3.out" }, 0.95);
+      tl.fromTo("#f04-w2", { opacity: 0, y: 30 }, { opacity: 1, y: 0, duration: 0.5, ease: "power3.out" }, 1.85);
+
+      // Scene 2: "Found." on "find" (3.03s) and a teal underline sweeps under it, then holds.
+      tl.fromTo("#f04-w3", { opacity: 0, y: 30 }, { opacity: 1, y: 0, duration: 0.5, ease: "power3.out" }, 2.95);
+      tl.fromTo("#f04-underline", { scaleX: 0 }, { scaleX: 1, duration: 0.5, ease: "power3.out" }, 3.3);
+
+      tl.to({}, { duration: 4.101 }, 0);
+      window.__timelines["04-search"] = tl;
+    })();
+  </script>
+</template>

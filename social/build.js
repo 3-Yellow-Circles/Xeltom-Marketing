@@ -109,7 +109,7 @@ const writeCsvs = () => {
   PLATFORMS.forEach((platform) => {
     const rows = posts
       .filter((p) => p.platform === platform)
-      .map((p) => [p.text, p.imageUrl, "", `${p.date} ${p.time}`]);
+      .map((p) => [p.text, p.kind === "reel" ? p.videoUrl : p.imageUrl, "", `${p.date} ${p.time}`]);
     for (let start = 0; start < rows.length; start += BATCH_SIZE) {
       const batch = [["Text", "Image URL", "Tags", "Posting Time"], ...rows.slice(start, start + BATCH_SIZE)];
       const last = Math.min(start + BATCH_SIZE, rows.length);

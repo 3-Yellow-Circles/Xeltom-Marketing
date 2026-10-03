@@ -9,3 +9,5 @@ social/*/output/
 social/**/renders/
 social/**/snapshots/
 social/**/voice-samples/
+social/**/.thumbnails/
+social/**/.waveform-cache/
