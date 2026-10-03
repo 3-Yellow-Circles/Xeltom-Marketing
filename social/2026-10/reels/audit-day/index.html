@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=1080, height=1920">
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js" integrity="sha384-sG0Hv1tP1lZCk9KQmrIbY/XNwi+OY84GQqhMscbnsoBFqAz8KNCil1kvfL3Hbbk2" crossorigin="anonymous"></script>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      html,
+      body {
+        width: 1080px;
+        height: 1920px;
+        overflow: hidden;
+        background: #000;
+      }
+      #root {
+        position: relative;
+        width: 1080px;
+        height: 1920px;
+        overflow: hidden;
+        background: #ffffff;
+      }
+      .scene {
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <div data-hf-id="hf-ksuc" id="root" data-composition-id="main" data-start="0" data-duration="18.782" data-width="1080" data-height="1920">
+      <div data-hf-id="hf-y6og" id="el-01-questions" class="scene" data-composition-id="01-questions" data-composition-src="compositions/frames/01-questions.html" data-start="0" data-duration="5.102" data-track-index="0"></div>
+      <audio data-hf-id="hf-qci8" id="el-01-questions-voice" src="assets/voice/01.wav" data-start="0" data-duration="4.702" data-track-index="10" data-volume="1"></audio>
+
+      <div data-hf-id="hf-fn4c" id="el-02-answer" class="scene" data-composition-id="02-answer" data-composition-src="compositions/frames/02-answer.html" data-start="4.702" data-duration="6.325" data-track-index="1"></div>
+      <audio data-hf-id="hf-qmin" id="el-02-answer-voice" src="assets/voice/02.wav" data-start="4.702" data-duration="5.825" data-track-index="10" data-volume="1"></audio>
+
+      <div data-hf-id="hf-c327" id="el-03-activity" class="scene" data-composition-id="03-activity" data-composition-src="compositions/frames/03-activity.html" data-start="10.527000000000001" data-duration="4.858" data-track-index="0"></div>
+      <audio data-hf-id="hf-6lxc" id="el-03-activity-voice" src="assets/voice/03.wav" data-start="10.527000000000001" data-duration="4.258" data-track-index="10" data-volume="1"></audio>
+
+      <div data-hf-id="hf-wfpv" id="el-04-register" class="scene" data-composition-id="04-register" data-composition-src="compositions/frames/04-register.html" data-start="14.785" data-duration="3.997" data-track-index="1"></div>
+      <audio data-hf-id="hf-2u6m" id="el-04-register-voice" src="assets/voice/04.wav" data-start="14.785" data-duration="3.997" data-track-index="10" data-volume="1"></audio>
+
+      <!-- BGM -->
+      <audio data-hf-id="hf-l4dk" id="el-bgm" src="assets/bgm/track.mp3" data-start="0" data-duration="18.782" data-track-index="11" data-volume="0.12"></audio>
+
+      <!-- captions -->
+      <div data-hf-id="hf-w47m" id="el-captions" class="scene" data-track-kind="captions" data-composition-id="captions" data-composition-src="compositions/captions.html" data-start="0" data-duration="18.782" data-track-index="2"></div>
+
+      <!-- SFX -->
+      <audio data-hf-id="hf-nly1" id="el-sfx-0" src="assets/sfx/impact-soft.mp3" data-start="1.55" data-duration="2.758" data-track-index="20" data-volume="0.35"></audio>
+      <audio data-hf-id="hf-iz21" id="el-sfx-1" src="assets/sfx/whoosh-soft.mp3" data-start="4.702" data-duration="1.58" data-track-index="21" data-volume="0.35"></audio>
+      <audio data-hf-id="hf-w5vu" id="el-sfx-2" src="assets/sfx/chime-soft.mp3" data-start="14.785" data-duration="1.273" data-track-index="22" data-volume="0.35"></audio>
+    </div>
+
+    <script>
+      window.__timelines = window.__timelines || {};
+      window.__timelines["main"] = gsap.timeline({ paused: true });
+      // ── frame transitions (injected by transitions.mjs) ──
+      (function () { var tl = window.__timelines["main"];
+        tl.to("#el-01-questions", { scale: 2.5, opacity: 0, filter: "blur(8px)", duration: 0.4, ease: "power3.in" }, 4.702);
+        tl.fromTo("#el-02-answer", { scale: 0.5, opacity: 0, filter: "blur(8px)" }, { scale: 1, opacity: 1, filter: "blur(0px)", duration: 0.4, ease: "power3.out" }, 4.702);
+        tl.to("#el-02-answer", { opacity: 0, duration: 0.5, ease: "power2.inOut" }, 10.527);
+        tl.fromTo("#el-03-activity", { opacity: 0 }, { opacity: 1, duration: 0.5, ease: "power2.inOut" }, 10.527);
+        tl.to("#el-03-activity", { filter: "blur(10px)", scale: 1.03, opacity: 0, duration: 0.6, ease: "power2.inOut" }, 14.785);
+        tl.fromTo("#el-04-register", { filter: "blur(10px)", scale: 0.97, opacity: 0 }, { filter: "blur(0px)", scale: 1, opacity: 1, duration: 0.6, ease: "power2.inOut" }, 14.785);
+        tl.to({}, { duration: 18.782 }, 0); // full-span anchor — main.duration() == composition total (Studio master duration)
+      })();
+    </script>
+  </body>
+</html>

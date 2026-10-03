@@ -1,0 +1,11 @@
+· tts: heygen · voice bb9907f77f44479996299a56bb04ac49 · 4 line(s)
+  voice 01: assets/voice/01.wav (5.773s, 12 words)
+  voice 02: assets/voice/02.wav (8.594s, 19 words)
+  voice 03: assets/voice/03.wav (4.101s, 13 words)
+  voice 04: assets/voice/04.wav (3.997s, 8 words)
+  bgm: assets/bgm/track.mp3 (retrieve "dry minimal playful underscore, light plucks and soft percussion, warm, sits under voice")
+✓ audio engine → /Users/regulus2/Documents/projects/Xeltom-Marketing/social/2026-10/reels/relief-note/audio_engine_meta.json
+  heygen: yes  ·  ran: tts,bgm
+  voices: 4  ·  bgm: heygen  ·  sfx: 0
+  total voice duration: 22.465s
+✓ audio generate: 4 voice + 1 bgm → /Users/regulus2/Documents/projects/Xeltom-Marketing/social/2026-10/reels/relief-note/audio_meta.json

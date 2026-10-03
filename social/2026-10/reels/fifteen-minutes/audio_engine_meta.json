@@ -1,0 +1,307 @@
+{
+  "tts_provider": "heygen",
+  "voice_id": "bb9907f77f44479996299a56bb04ac49",
+  "bgm": {
+    "path": "assets/bgm/track.mp3",
+    "volume": 0.12,
+    "query": "light upbeat minimal underscore with a ticking pulse, playful, sits under voice",
+    "mode": "retrieve",
+    "duration_s": 68
+  },
+  "bgm_pending": false,
+  "bgm_provider": "heygen",
+  "bgm_pid": null,
+  "bgm_log": null,
+  "bgm_mode": "retrieve",
+  "bgm_target_duration_s": null,
+  "bgm_seed_duration_s": null,
+  "bgm_loop_count": null,
+  "voices": [
+    {
+      "id": "01",
+      "path": "assets/voice/01.wav",
+      "duration_s": 4.624,
+      "words": [
+        {
+          "id": "w0",
+          "text": "Class",
+          "start": 0.299,
+          "end": 0.5547
+        },
+        {
+          "id": "w1",
+          "text": "starts",
+          "start": 0.64,
+          "end": 0.8107
+        },
+        {
+          "id": "w2",
+          "text": "in",
+          "start": 0.896,
+          "end": 0.981
+        },
+        {
+          "id": "w3",
+          "text": "fifteen",
+          "start": 1.024,
+          "end": 1.3227
+        },
+        {
+          "id": "w4",
+          "text": "minutes.",
+          "start": 1.365,
+          "end": 1.856
+        },
+        {
+          "id": "w5",
+          "text": "And",
+          "start": 2.261,
+          "end": 2.4747
+        },
+        {
+          "id": "w6",
+          "text": "you",
+          "start": 2.688,
+          "end": 3.072
+        },
+        {
+          "id": "w7",
+          "text": "need",
+          "start": 3.115,
+          "end": 3.2427
+        },
+        {
+          "id": "w8",
+          "text": "one",
+          "start": 3.285,
+          "end": 3.584
+        },
+        {
+          "id": "w9",
+          "text": "more",
+          "start": 3.669,
+          "end": 3.797
+        },
+        {
+          "id": "w10",
+          "text": "activity.",
+          "start": 3.883,
+          "end": 4.5797278911564625
+        }
+      ]
+    },
+    {
+      "id": "02",
+      "path": "assets/voice/02.wav",
+      "duration_s": 5.094,
+      "words": [
+        {
+          "id": "w0",
+          "text": "So",
+          "start": 0.299,
+          "end": 0.512
+        },
+        {
+          "id": "w1",
+          "text": "you",
+          "start": 0.725,
+          "end": 1.024
+        },
+        {
+          "id": "w2",
+          "text": "search",
+          "start": 1.067,
+          "end": 1.28
+        },
+        {
+          "id": "w3",
+          "text": "Xeltom,",
+          "start": 1.536,
+          "end": 2.645
+        },
+        {
+          "id": "w4",
+          "text": "filter",
+          "start": 2.944,
+          "end": 3.2
+        },
+        {
+          "id": "w5",
+          "text": "by",
+          "start": 3.243,
+          "end": 3.328
+        },
+        {
+          "id": "w6",
+          "text": "category,",
+          "start": 3.371,
+          "end": 3.947
+        },
+        {
+          "id": "w7",
+          "text": "and",
+          "start": 4.139,
+          "end": 4.2667
+        },
+        {
+          "id": "w8",
+          "text": "there",
+          "start": 4.309,
+          "end": 4.48
+        },
+        {
+          "id": "w9",
+          "text": "it",
+          "start": 4.523,
+          "end": 4.608
+        },
+        {
+          "id": "w10",
+          "text": "is.",
+          "start": 4.608,
+          "end": 5.055736961451247
+        }
+      ]
+    },
+    {
+      "id": "03",
+      "path": "assets/voice/03.wav",
+      "duration_s": 4.258,
+      "words": [
+        {
+          "id": "w0",
+          "text": "A",
+          "start": 0.299,
+          "end": 0.384
+        },
+        {
+          "id": "w1",
+          "text": "trainer",
+          "start": 0.427,
+          "end": 0.725
+        },
+        {
+          "id": "w2",
+          "text": "at",
+          "start": 0.768,
+          "end": 0.896
+        },
+        {
+          "id": "w3",
+          "text": "EQC",
+          "start": 0.939,
+          "end": 1.408
+        },
+        {
+          "id": "w4",
+          "text": "Institute",
+          "start": 1.451,
+          "end": 1.92
+        },
+        {
+          "id": "w5",
+          "text": "did",
+          "start": 2.176,
+          "end": 2.645
+        },
+        {
+          "id": "w6",
+          "text": "exactly",
+          "start": 3.029,
+          "end": 3.328
+        },
+        {
+          "id": "w7",
+          "text": "that.",
+          "start": 3.627,
+          "end": 4.143
+        }
+      ]
+    },
+    {
+      "id": "04",
+      "path": "assets/voice/04.wav",
+      "duration_s": 3.997,
+      "words": [
+        {
+          "id": "w0",
+          "text": "Xeltom.",
+          "start": 0.256,
+          "end": 1.024
+        },
+        {
+          "id": "w1",
+          "text": "Register",
+          "start": 1.365,
+          "end": 1.7067
+        },
+        {
+          "id": "w2",
+          "text": "now,",
+          "start": 1.877,
+          "end": 2.283
+        },
+        {
+          "id": "w3",
+          "text": "and",
+          "start": 2.475,
+          "end": 2.7307
+        },
+        {
+          "id": "w4",
+          "text": "get",
+          "start": 2.773,
+          "end": 2.901
+        },
+        {
+          "id": "w5",
+          "text": "three",
+          "start": 2.944,
+          "end": 3.157
+        },
+        {
+          "id": "w6",
+          "text": "months",
+          "start": 3.243,
+          "end": 3.3707
+        },
+        {
+          "id": "w7",
+          "text": "free.",
+          "start": 3.499,
+          "end": 3.9527891156462585
+        }
+      ]
+    }
+  ],
+  "sfx": [
+    {
+      "id": "01",
+      "name": "keyboard-typing-soft",
+      "file": "assets/sfx/keyboard-typing-soft.mp3",
+      "source": "heygen",
+      "offset_s": 0,
+      "duration_s": 44.382,
+      "volume": 0.35
+    },
+    {
+      "id": "02",
+      "name": "whoosh-soft",
+      "file": "assets/sfx/whoosh-soft.mp3",
+      "source": "heygen",
+      "offset_s": 0,
+      "duration_s": 1.58,
+      "volume": 0.35
+    },
+    {
+      "id": "04",
+      "name": "chime-soft",
+      "file": "assets/sfx/chime-soft.mp3",
+      "source": "heygen",
+      "offset_s": 0,
+      "duration_s": 1.273,
+      "volume": 0.35
+    }
+  ],
+  "total_duration_s": 17.973
+}

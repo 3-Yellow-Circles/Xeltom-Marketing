@@ -1,0 +1,38 @@
+<template>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+  <style>
+    @font-face { font-family: "Space Grotesk"; font-weight: 500; src: url("assets/fonts/space-grotesk-500.woff2") format("woff2"); }
+    @font-face { font-family: "Space Grotesk"; font-weight: 700; src: url("assets/fonts/space-grotesk-700.woff2") format("woff2"); }
+    @font-face { font-family: "Inter"; font-weight: 500; src: url("assets/fonts/inter-500.woff2") format("woff2"); }
+    #root { position: absolute; inset: 0; width: 1080px; height: 1920px; overflow: hidden; }
+    #root .ground { position: absolute; inset: 0; background: radial-gradient(circle at 85% 10%, rgba(25, 181, 155, 0.14) 0%, transparent 40%), #ffffff; }
+    #root .cap-fade { position: absolute; left: 0; right: 0; top: 1600px; height: 320px; background: linear-gradient(180deg, rgba(20, 32, 56, 0) 0%, rgba(20, 32, 56, 0.9) 38%, #142038 100%); }
+    #root .headline { position: absolute; left: 72px; font-family: "Space Grotesk", sans-serif; font-weight: 700; font-size: 104px; line-height: 1.05; letter-spacing: -0.02em; color: #142038; white-space: nowrap; }
+    #root .headline.accent { color: #108774; }
+    #root .card { position: absolute; left: 48px; width: 984px; border-radius: 18px; overflow: hidden; background: #ffffff; border: 1.5px solid rgba(25, 181, 155, 0.2); box-shadow: 0 40px 80px rgba(20, 32, 56, 0.18), 0 8px 20px rgba(20, 32, 56, 0.08); }
+    #root .zoom { position: absolute; left: 0; top: 0; transform-origin: 0 0; }
+    #root .zoom img { position: absolute; left: 0; top: 0; }
+    #root .ring { position: absolute; border-radius: 10px; border: 3px solid #19b59b; box-shadow: 0 0 0 6px rgba(25, 181, 155, 0.18); }
+  </style>
+
+  <div data-hf-id="hf-2wvj" id="root" data-composition-id="03-explained" data-width="1080" data-height="1920" data-duration="4.701">
+    <div data-hf-id="hf-1gma" id="rn3-ground" class="ground clip" data-start="0" data-duration="4.701" data-track-index="0"></div>
+    <div data-hf-id="hf-984p" id="rn3-h1" class="headline clip" style="top: 300px;" data-start="0" data-duration="4.701" data-track-index="1">What it's for.</div>
+    <div data-hf-id="hf-c609" id="rn3-h2" class="headline accent clip" style="top: 420px;" data-start="0" data-duration="4.701" data-track-index="2">How to use it.</div>
+    <div data-hf-id="hf-oh1t" id="rn3-card" class="card clip" style="top: 640px; height: 684px;" data-start="0" data-duration="4.701" data-track-index="3"></div>
+    <div data-hf-id="hf-geer" id="rn3-fade" class="cap-fade clip" data-start="0" data-duration="4.701" data-track-index="4"></div>
+    <!-- approved frame video hoisted by assemble-index -->
+  </div>
+
+  <script>
+    (function () {
+      const tl = gsap.timeline({ paused: true });
+      tl.fromTo("#rn3-card", { opacity: 0, y: 60 }, { opacity: 1, y: 0, duration: 0.6, ease: "power3.out" }, 0.05);
+      tl.fromTo("#rn3-h1", { opacity: 0, y: 30 }, { opacity: 1, y: 0, duration: 0.6, ease: "power3.out" }, 2.15);
+      tl.fromTo("#rn3-h2", { opacity: 0, y: 30 }, { opacity: 1, y: 0, duration: 0.6, ease: "power3.out" }, 3.25);
+
+      tl.to({}, { duration: 4.101 }, 0);
+      window.__timelines["03-explained"] = tl;
+    })();
+  </script>
+</template>

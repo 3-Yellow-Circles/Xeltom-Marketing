@@ -1,0 +1,391 @@
+{
+  "tts_provider": "heygen",
+  "voice_id": "bb9907f77f44479996299a56bb04ac49",
+  "bgm": {
+    "path": "assets/bgm/track.mp3",
+    "volume": 0.12,
+    "query": "dry minimal playful underscore, light plucks and soft percussion, warm, sits under voice",
+    "mode": "retrieve",
+    "duration_s": 37
+  },
+  "bgm_pending": false,
+  "bgm_provider": "heygen",
+  "bgm_pid": null,
+  "bgm_log": null,
+  "bgm_mode": "retrieve",
+  "bgm_target_duration_s": null,
+  "bgm_seed_duration_s": null,
+  "bgm_loop_count": null,
+  "voices": [
+    {
+      "id": "01",
+      "path": "assets/voice/01.wav",
+      "duration_s": 5.773,
+      "words": [
+        {
+          "id": "w0",
+          "text": "You're",
+          "start": 0.299,
+          "end": 0.4267
+        },
+        {
+          "id": "w1",
+          "text": "covering",
+          "start": 0.469,
+          "end": 0.725
+        },
+        {
+          "id": "w2",
+          "text": "a",
+          "start": 0.768,
+          "end": 0.853
+        },
+        {
+          "id": "w3",
+          "text": "class",
+          "start": 0.896,
+          "end": 1.109
+        },
+        {
+          "id": "w4",
+          "text": "tomorrow.",
+          "start": 1.195,
+          "end": 1.792
+        },
+        {
+          "id": "w5",
+          "text": "The",
+          "start": 2.176,
+          "end": 2.304
+        },
+        {
+          "id": "w6",
+          "text": "handover",
+          "start": 2.347,
+          "end": 2.688
+        },
+        {
+          "id": "w7",
+          "text": "note",
+          "start": 2.773,
+          "end": 2.9867
+        },
+        {
+          "id": "w8",
+          "text": "says:",
+          "start": 3.285,
+          "end": 3.819
+        },
+        {
+          "id": "w9",
+          "text": "lesson",
+          "start": 4.139,
+          "end": 4.3947
+        },
+        {
+          "id": "w10",
+          "text": "plan's...",
+          "start": 4.437,
+          "end": 5.013
+        },
+        {
+          "id": "w11",
+          "text": "somewhere.",
+          "start": 5.077,
+          "end": 5.730748299319728
+        }
+      ]
+    },
+    {
+      "id": "02",
+      "path": "assets/voice/02.wav",
+      "duration_s": 8.594,
+      "words": [
+        {
+          "id": "w0",
+          "text": "In",
+          "start": 0.299,
+          "end": 0.384
+        },
+        {
+          "id": "w1",
+          "text": "Xeltom,",
+          "start": 0.427,
+          "end": 1.003
+        },
+        {
+          "id": "w2",
+          "text": "every",
+          "start": 1.195,
+          "end": 1.408
+        },
+        {
+          "id": "w3",
+          "text": "course",
+          "start": 1.493,
+          "end": 1.7067
+        },
+        {
+          "id": "w4",
+          "text": "has",
+          "start": 1.835,
+          "end": 1.92
+        },
+        {
+          "id": "w5",
+          "text": "its",
+          "start": 1.963,
+          "end": 2.048
+        },
+        {
+          "id": "w6",
+          "text": "resources",
+          "start": 2.133,
+          "end": 2.432
+        },
+        {
+          "id": "w7",
+          "text": "sorted",
+          "start": 2.645,
+          "end": 2.901
+        },
+        {
+          "id": "w8",
+          "text": "by",
+          "start": 2.944,
+          "end": 3.072
+        },
+        {
+          "id": "w9",
+          "text": "type.",
+          "start": 3.115,
+          "end": 3.563
+        },
+        {
+          "id": "w10",
+          "text": "Lesson",
+          "start": 3.84,
+          "end": 4.181
+        },
+        {
+          "id": "w11",
+          "text": "plans,",
+          "start": 4.267,
+          "end": 4.715
+        },
+        {
+          "id": "w12",
+          "text": "assessment",
+          "start": 4.949,
+          "end": 5.461
+        },
+        {
+          "id": "w13",
+          "text": "guides,",
+          "start": 5.504,
+          "end": 5.952
+        },
+        {
+          "id": "w14",
+          "text": "trainer",
+          "start": 6.187,
+          "end": 6.528
+        },
+        {
+          "id": "w15",
+          "text": "tools,",
+          "start": 6.571,
+          "end": 6.955
+        },
+        {
+          "id": "w16",
+          "text": "links",
+          "start": 7.168,
+          "end": 7.4667
+        },
+        {
+          "id": "w17",
+          "text": "and",
+          "start": 7.595,
+          "end": 7.8507
+        },
+        {
+          "id": "w18",
+          "text": "videos.",
+          "start": 7.893,
+          "end": 8.363673469387756
+        }
+      ]
+    },
+    {
+      "id": "03",
+      "path": "assets/voice/03.wav",
+      "duration_s": 4.101,
+      "words": [
+        {
+          "id": "w0",
+          "text": "And",
+          "start": 0.299,
+          "end": 0.4267
+        },
+        {
+          "id": "w1",
+          "text": "every",
+          "start": 0.469,
+          "end": 0.64
+        },
+        {
+          "id": "w2",
+          "text": "resource",
+          "start": 0.725,
+          "end": 1.1947
+        },
+        {
+          "id": "w3",
+          "text": "tells",
+          "start": 1.451,
+          "end": 1.92
+        },
+        {
+          "id": "w4",
+          "text": "you",
+          "start": 2.005,
+          "end": 2.133
+        },
+        {
+          "id": "w5",
+          "text": "what",
+          "start": 2.176,
+          "end": 2.261
+        },
+        {
+          "id": "w6",
+          "text": "it's",
+          "start": 2.304,
+          "end": 2.432
+        },
+        {
+          "id": "w7",
+          "text": "for,",
+          "start": 2.475,
+          "end": 2.731
+        },
+        {
+          "id": "w8",
+          "text": "and",
+          "start": 2.901,
+          "end": 3.2427
+        },
+        {
+          "id": "w9",
+          "text": "how",
+          "start": 3.285,
+          "end": 3.456
+        },
+        {
+          "id": "w10",
+          "text": "to",
+          "start": 3.499,
+          "end": 3.584
+        },
+        {
+          "id": "w11",
+          "text": "use",
+          "start": 3.627,
+          "end": 3.712
+        },
+        {
+          "id": "w12",
+          "text": "it.",
+          "start": 3.797,
+          "end": 4.0705215419501135
+        }
+      ]
+    },
+    {
+      "id": "04",
+      "path": "assets/voice/04.wav",
+      "duration_s": 3.997,
+      "words": [
+        {
+          "id": "w0",
+          "text": "Xeltom.",
+          "start": 0.256,
+          "end": 1.024
+        },
+        {
+          "id": "w1",
+          "text": "Register",
+          "start": 1.365,
+          "end": 1.7067
+        },
+        {
+          "id": "w2",
+          "text": "now,",
+          "start": 1.877,
+          "end": 2.283
+        },
+        {
+          "id": "w3",
+          "text": "and",
+          "start": 2.475,
+          "end": 2.7307
+        },
+        {
+          "id": "w4",
+          "text": "get",
+          "start": 2.773,
+          "end": 2.901
+        },
+        {
+          "id": "w5",
+          "text": "three",
+          "start": 2.944,
+          "end": 3.157
+        },
+        {
+          "id": "w6",
+          "text": "months",
+          "start": 3.243,
+          "end": 3.3707
+        },
+        {
+          "id": "w7",
+          "text": "free.",
+          "start": 3.499,
+          "end": 3.9527891156462585
+        }
+      ]
+    }
+  ],
+  "sfx": [
+    {
+      "id": "01",
+      "name": "impact-soft",
+      "file": "assets/sfx/impact-soft.mp3",
+      "source": "heygen",
+      "offset_s": 0,
+      "duration_s": 2.758,
+      "volume": 0.35
+    },
+    {
+      "id": "02",
+      "name": "whoosh-soft",
+      "file": "assets/sfx/whoosh-soft.mp3",
+      "source": "heygen",
+      "offset_s": 0,
+      "duration_s": 1.58,
+      "volume": 0.35
+    },
+    {
+      "id": "04",
+      "name": "chime-soft",
+      "file": "assets/sfx/chime-soft.mp3",
+      "source": "heygen",
+      "offset_s": 0,
+      "duration_s": 1.273,
+      "volume": 0.35
+    }
+  ],
+  "total_duration_s": 22.465
+}

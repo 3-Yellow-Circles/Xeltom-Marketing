@@ -1,0 +1,44 @@
+<template>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+  <style>
+    @font-face { font-family: "Space Grotesk"; font-weight: 500; src: url("assets/fonts/space-grotesk-500.woff2") format("woff2"); }
+    @font-face { font-family: "Space Grotesk"; font-weight: 700; src: url("assets/fonts/space-grotesk-700.woff2") format("woff2"); }
+    @font-face { font-family: "Inter"; font-weight: 500; src: url("assets/fonts/inter-500.woff2") format("woff2"); }
+    #root { position: absolute; inset: 0; width: 1080px; height: 1920px; overflow: hidden; }
+    #root .ground { position: absolute; inset: 0; background: radial-gradient(circle at 85% 10%, rgba(25, 181, 155, 0.14) 0%, transparent 40%), #ffffff; }
+    #root .cap-fade { position: absolute; left: 0; right: 0; top: 1600px; height: 320px; background: linear-gradient(180deg, rgba(20, 32, 56, 0) 0%, rgba(20, 32, 56, 0.9) 38%, #142038 100%); }
+    #root .headline { position: absolute; left: 72px; font-family: "Space Grotesk", sans-serif; font-weight: 700; font-size: 104px; line-height: 1.05; letter-spacing: -0.02em; color: #142038; white-space: nowrap; }
+    #root .headline.accent { color: #108774; }
+    #root .card { position: absolute; left: 48px; width: 984px; border-radius: 18px; overflow: hidden; background: #ffffff; border: 1.5px solid rgba(25, 181, 155, 0.2); box-shadow: 0 40px 80px rgba(20, 32, 56, 0.18), 0 8px 20px rgba(20, 32, 56, 0.08); }
+    #root .zoom { position: absolute; left: 0; top: 0; transform-origin: 0 0; }
+    #root .zoom img { position: absolute; left: 0; top: 0; }
+    #root .ring { position: absolute; border-radius: 10px; border: 3px solid #19b59b; box-shadow: 0 0 0 6px rgba(25, 181, 155, 0.18); }
+    #root .chips { position: absolute; left: 72px; right: 72px; top: 420px; display: flex; flex-wrap: wrap; gap: 16px; }
+    #root .chip { padding: 14px 28px; border-radius: 100px; background: rgba(25, 181, 155, 0.1); border: 1.5px solid rgba(25, 181, 155, 0.35); font-family: "Space Grotesk", sans-serif; font-weight: 500; font-size: 38px; color: #142038; }
+  </style>
+
+  <div data-hf-id="hf-abp7" id="root" data-composition-id="02-sorted" data-width="1080" data-height="1920" data-duration="9.094">
+    <div data-hf-id="hf-5yex" id="rn2-ground" class="ground clip" data-start="0" data-duration="9.094" data-track-index="0"></div>
+    <div data-hf-id="hf-k4s1" id="rn2-h" class="headline clip" style="top: 270px;" data-start="0" data-duration="9.094" data-track-index="1">Sorted by type.</div>
+    <div data-hf-id="hf-5nj7" id="rn2-chips" class="chips clip" data-start="0" data-duration="9.094" data-track-index="2"><div data-hf-id="hf-298b" class="chip" id="rn2-c1">Lesson plans</div><div data-hf-id="hf-4a1r" class="chip" id="rn2-c2">Assessment guides</div><div data-hf-id="hf-3w5x" class="chip" id="rn2-c3">Trainer tools</div><div data-hf-id="hf-htt3" class="chip" id="rn2-c4">Links</div><div data-hf-id="hf-8k8b" class="chip" id="rn2-c5">Videos</div></div>
+    <div data-hf-id="hf-omt6" id="rn2-card" class="card clip" style="top: 680px; height: 664px;" data-start="0" data-duration="9.094" data-track-index="3"></div>
+    <div data-hf-id="hf-93m8" id="rn2-fade" class="cap-fade clip" data-start="0" data-duration="9.094" data-track-index="4"></div>
+    <!-- approved frame video hoisted by assemble-index -->
+  </div>
+
+  <script>
+    (function () {
+      const tl = gsap.timeline({ paused: true });
+      tl.fromTo("#rn2-card", { opacity: 0, y: 60 }, { opacity: 1, y: 0, duration: 0.6, ease: "power3.out" }, 0.05);
+      tl.fromTo("#rn2-h", { opacity: 0, y: 30 }, { opacity: 1, y: 0, duration: 0.6, ease: "power3.out" }, 2.6);
+      tl.fromTo("#rn2-c1", { opacity: 0, y: 20 }, { opacity: 1, y: 0, duration: 0.45, ease: "power3.out" }, 3.8);
+      tl.fromTo("#rn2-c2", { opacity: 0, y: 20 }, { opacity: 1, y: 0, duration: 0.45, ease: "power3.out" }, 4.9);
+      tl.fromTo("#rn2-c3", { opacity: 0, y: 20 }, { opacity: 1, y: 0, duration: 0.45, ease: "power3.out" }, 6.15);
+      tl.fromTo("#rn2-c4", { opacity: 0, y: 20 }, { opacity: 1, y: 0, duration: 0.45, ease: "power3.out" }, 7.12);
+      tl.fromTo("#rn2-c5", { opacity: 0, y: 20 }, { opacity: 1, y: 0, duration: 0.45, ease: "power3.out" }, 7.85);
+
+      tl.to({}, { duration: 8.594 }, 0);
+      window.__timelines["02-sorted"] = tl;
+    })();
+  </script>
+</template>
